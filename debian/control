@@ -1,9 +1,11 @@
 Source: mtools
-Build-Depends: debhelper (>= 7), autotools-dev, libxt-dev, texinfo
 Section: otherosfs
 Priority: optional
-Maintainer: Alain Knaff <alain@knaff.lu>
-Homepage: http://www.mtools.linux.lu/
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 9), autotools-dev, libxfont-dev, libxt-dev, texinfo
+Standards-Version: 3.9.6
+Homepage: http://www.gnu.org/software/mtools/
 
 Package: floppyd
 Priority: extra
@@ -19,12 +21,11 @@ Description: Daemon for remote access to floppy drives
 Package: mtools
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Provides: mtools
 Suggests: floppyd
 Description: Tools for manipulating MSDOS files
  Mtools is a collection of utilities to access MS-DOS disks from Unix
  without mounting them. It supports Win'95 style long file names, OS/2
- Xdf disks, ZIP/JAZ disks and 2m disks (store up to 1992k on a high
+ Xdf disks, ZIP/JAZ disks and 2m disks (store up to 1992kB on a high
  density 3 1/2 disk).
  .
  Also included in this package are commands to eject and manipulate
